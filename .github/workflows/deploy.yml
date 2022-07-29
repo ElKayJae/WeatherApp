@@ -3,15 +3,15 @@ name: Deploy
 on:
   push:
     branches:
-      -main
+      - main
 
 jobs:
   build:
-    run-on: ubuntu-latest
-      steps:
-        -uses: actions/checkout@v2
-        -uses: akhileshns/heroku-deploy@v3.12.12 ## this is the action
-         with:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_api_name: "vast-beach-78146"
+          heroku_app_name: "vast-beach-78146" #Must be unique in Heroku
           heroku_email: "lowkejun@gmail.com"

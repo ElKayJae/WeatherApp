@@ -14,4 +14,4 @@ jobs:
          with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_api_name: "vast-beach-78146"
-          heroku_email: lowkejun@gmail.com
+          heroku_email: "lowkejun@gmail.com"
